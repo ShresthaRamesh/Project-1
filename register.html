@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <div class="logo">
+                <img src="logo.png" alt="Logo"> <!-- Replace with your logo -->
+            </div>
+            <h1>Register</h1>
+            <p>Manage all your inventory efficiently</p>
+            <p>Let's get you on board so you can verify your personal account and begin setting up your work profile.</p>
+            <form id="registerForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" id="firstName" placeholder="Enter your name">
+                        <div class="error-message" id="firstNameError"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" placeholder="Enter your last name">
+                        <div class="error-message" id="lastNameError"></div>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" placeholder="Enter your Email">
+                        <div class="error-message" id="regEmailError"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone No.</label>
+                        <input type="text" id="phoneNumber" placeholder="Enter your Phone Number (Minimum 10 digits)">
+                        <div class="error-message" id="phoneNumberError"></div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="Enter your Password">
+                    <div class="error-message" id="regPasswordError"></div>
+                </div>
+                <div class="options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="termsCheckbox"> I agree to all terms, privacy policies, and laws
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="error-message" id="termsError"></div>
+                </div>
+                <button type="submit" class="btn primary-btn">Sign up</button>
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+        <div class="image-section">
+            <!-- Background image or illustration as per your Figma design -->
+            <img src="register-illustration.png" alt="Register Illustration"> 
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
