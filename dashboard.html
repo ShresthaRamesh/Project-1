@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stationery Management System</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Menu Page -->
+        <div id="mainMenuPage" class="page active">
+            <div class="header">
+                <h1>📋 Main Dashboard</h1>
+                <p>Welcome to your stationery management system</p>
+                <!-- <div style="text-align: right; margin-top: 10px;">
+                    <span style="color: #666;">Welcome, <strong id="currentUserDisplay"></strong></span>
+                    <button class="btn btn-secondary" onclick="logout()" style="margin-left: 10px; padding: 5px 15px; font-size: 14px;">Logout</button>
+                </div> -->
+            </div>
+            <div class="content">
+                <div class="menu-grid">
+                    <div class="menu-card" onclick="showPage('inventoryPage')">
+                        <div class="icon">📦</div>
+                        <h3>Inventory Items</h3>
+                        <p>View and manage all stationery items</p>
+                    </div>
+                    <div class="menu-card" onclick="showPage('addItemPage')">
+                        <div class="icon">➕</div>
+                        <h3>Add New Item</h3>
+                        <p>Add new stationery items to inventory</p>
+                    </div>
+                    <div class="menu-card" onclick="showPage('reportsPage')">
+                        <div class="icon">📊</div>
+                        <h3>Reports</h3>
+                        <p>View inventory reports and analytics</p>
+                    </div>
+                    <!-- <div class="menu-card" onclick="logout()">
+                        <div class="icon">🚪</div>
+                        <h3>Logout</h3>
+                        <p>Sign out of the system</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Inventory Items Page -->
+        <div id="inventoryPage" class="page">
+            <div class="header">
+                <h1>📦 Inventory Items</h1>
+                <p>Manage your stationery inventory</p>
+            </div>
+            <div class="content">
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search items..." onkeyup="filterInventory()">
+                    <select id="categoryFilter" onchange="filterInventory()">
+                        <option value="">All Categories</option>
+                        <option value="Writing">Writing</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Organization">Organization</option>
+                        <option value="Art">Art</option>
+                    </select>
+                    <select id="statusFilter" onchange="filterInventory()">
+                        <option value="">All Status</option>
+                        <option value="Normal">Normal Stock</option>
+                        <option value="Low">Low Stock</option>
+                        <option value="Critical">Critical Stock</option>
+                    </select>
+                </div>
+                
+                <table class="inventory-table" id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Category</th>
+                            <th>Min. Threshold</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryTableBody">
+                        <!-- Items will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-success" onclick="showPage('addItemPage')">Add New Item</button>
+                    <button class="btn" onclick="showPage('mainMenuPage')">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add New Item Page -->
+        <div id="addItemPage" class="page">
+            <div class="header">
+                <h1>➕ Add New Item</h1>
+                <p>Add a new stationery item to inventory</p>
+            </div>
+            <div class="content">
+                <form class="login-form" onsubmit="addNewItem(event)" style="max-width: 500px;">
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" id="itemName" name="itemName" required placeholder="Enter item name">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemQuantity">Quantity</label>
+                        <input type="number" id="itemQuantity" name="itemQuantity" required min="0" placeholder="Enter quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemCategory">Category</label>
+                        <select id="itemCategory" name="itemCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="Writing">Writing</option>
+                            <option value="Paper">Paper</option>
+                            <option value="Organization">Organization</option>
+                            <option value="Art">Art</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemThreshold">Minimum Stock Threshold</label>
+                        <input type="number" id="itemThreshold" name="itemThreshold" required min="1" placeholder="Enter minimum threshold">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" style="width: 100%;">Add Item</button>
+                    </div>
+                </form>
+                
+                <div class="nav-buttons">
+                    <button class="btn" onclick="showPage('inventoryPage')">View Inventory</button>
+                    <button class="btn" onclick="showPage('mainMenuPage')">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reports Page -->
+        <div id="reportsPage" class="page">
+            <div class="header">
+                <h1>📊 Inventory Reports</h1>
+                <p>Analytics and insights for your inventory</p>
+            </div>
+            <div class="content">
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <div class="number" id="totalItems">0</div>
+                        <div class="label">Total Items</div>
+                    </div>
+                    <div class="report-card">
+                        <div class="number" id="lowStockItems">0</div>
+                        <div class="label">Low Stock Items</div>
+                    </div>
+                    <div class="report-card">
+                        <div class="number" id="criticalItems">0</div>
+                        <div class="label">Critical Items</div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 style="margin-bottom: 20px; text-align: center;">Items by Category</h3>
+                    <canvas id="categoryChart" width="400" height="200"></canvas>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn" onclick="showPage('mainMenuPage')">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample inventory data
+        let inventory = [
+            { id: 1, name: "Blue Pens", quantity: 50, category: "Writing", threshold: 10 },
+            { id: 2, name: "Red Pens", quantity: 8, category: "Writing", threshold: 10 },
+            { id: 3, name: "A4 Paper", quantity: 200, category: "Paper", threshold: 50 },
+            { id: 4, name: "Notebooks", quantity: 25, category: "Paper", threshold: 15 },
+            { id: 5, name: "Markers", quantity: 3, category: "Art", threshold: 5 },
+            { id: 6, name: "Folders", quantity: 30, category: "Organization", threshold: 10 },
+            { id: 7, name: "Staplers", quantity: 12, category: "Organization", threshold: 5 },
+            { id: 8, name: "Highlighters", quantity: 15, category: "Writing", threshold: 8 }
+        ];
+
+        let nextId = 9;
+
+        // Show specific page
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update content based on page
+            if (pageId === 'inventoryPage') {
+                displayInventory();
+            } else if (pageId === 'reportsPage') {
+                updateReports();
+            }
+        }
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('currentUser');
+            window.location.href = 'login.html';
+        }
+
+        // Get stock status
+        function getStockStatus(quantity, threshold) {
+            if (quantity <= threshold * 0.5) return 'Critical';
+            if (quantity <= threshold) return 'Low';
+            return 'Normal';
+        }
+
+        // Display inventory
+        function displayInventory() {
+            const tbody = document.getElementById('inventoryTableBody');
+            tbody.innerHTML = '';
+            
+            inventory.forEach(item => {
+                const status = getStockStatus(item.quantity, item.threshold);
+                const statusClass = status.toLowerCase();
+                
+                const row = `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>${item.category}</td>
+                        <td>${item.threshold}</td>
+                        <td><span class="status-badge status-${statusClass}">${status}</span></td>
+                        <td>
+                            <button class="btn btn-danger" onclick="deleteItem(${item.id})">
+                                ❌
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Filter inventory
+        function filterInventory() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+            
+            const tbody = document.getElementById('inventoryTableBody');
+            tbody.innerHTML = '';
+            
+            const filteredInventory = inventory.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchTerm);
+                const matchesCategory = !categoryFilter || item.category === categoryFilter;
+                const status = getStockStatus(item.quantity, item.threshold);
+                const matchesStatus = !statusFilter || status === statusFilter;
+                
+                return matchesSearch && matchesCategory && matchesStatus;
+            });
+            
+            filteredInventory.forEach(item => {
+                const status = getStockStatus(item.quantity, item.threshold);
+                const statusClass = status.toLowerCase();
+                
+                const row = `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>${item.category}</td>
+                        <td>${item.threshold}</td>
+                        <td><span class="status-badge status-${statusClass}">${status}</span></td>
+                        <td>
+                            <button class="btn btn-danger" onclick="deleteItem(${item.id})" style="padding: 5px 10px; font-size: 12px;">
+                                ❌ Delete
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Add new item
+        function addNewItem(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('itemName').value;
+            const quantity = parseInt(document.getElementById('itemQuantity').value);
+            const category = document.getElementById('itemCategory').value;
+            const threshold = parseInt(document.getElementById('itemThreshold').value);
+            
+            const newItem = {
+                id: nextId++,
+                name: name,
+                quantity: quantity,
+                category: category,
+                threshold: threshold
+            };
+            
+            inventory.push(newItem);
+            
+            // Clear form
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemQuantity').value = '';
+            document.getElementById('itemCategory').value = '';
+            document.getElementById('itemThreshold').value = '';
+            
+            alert('Item added successfully!');
+            showPage('inventoryPage');
+        }
+
+        // Delete item function
+        function deleteItem(itemId) {
+            // Find the item to get its name for confirmation
+            const item = inventory.find(item => item.id === itemId);
+            
+            if (item && confirm(`Are you sure you want to delete "${item.name}"?`)) {
+                // Remove the item from inventory array
+                inventory = inventory.filter(item => item.id !== itemId);
+                
+                // Refresh the inventory display
+                displayInventory();
+                
+                alert('Item deleted successfully!');
+            }
+        }
+
+        // Update reports
+        function updateReports() {
+            const totalItems = inventory.length;
+            let lowStockCount = 0;
+            let criticalCount = 0;
+            
+            const categoryCount = {};
+            
+            inventory.forEach(item => {
+                const status = getStockStatus(item.quantity, item.threshold);
+                if (status === 'Low') lowStockCount++;
+                if (status === 'Critical') criticalCount++;
+                
+                categoryCount[item.category] = (categoryCount[item.category] || 0) + 1;
+            });
+            
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('lowStockItems').textContent = lowStockCount;
+            document.getElementById('criticalItems').textContent = criticalCount;
+            
+            // Create chart
+            const ctx = document.getElementById('categoryChart').getContext('2d');
+            
+            // Destroy existing chart if it exists
+            if (window.categoryChartInstance) {
+                window.categoryChartInstance.destroy();
+            }
+            
+            window.categoryChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(categoryCount),
+                    datasets: [{
+                        data: Object.values(categoryCount),
+                        backgroundColor: [
+                            '#4facfe',
+                            '#00f2fe',
+                            '#667eea',
+                            '#764ba2',
+                            '#11998e',
+                            '#38ef7d'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Check authentication and initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Display current user
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                document.getElementById('currentUserDisplay').textContent = currentUser;
+            }
+            
+            // Initialize inventory display
+            displayInventory();
+        });
+    </script>
+</body>
+</html>

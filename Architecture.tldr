@@ -1,0 +1,1316 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 5,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 3,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 7,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
+		}
+	},
+	"records": [
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 54.171855496650295,
+			"y": -2433.5996264404307,
+			"lastActivityTimestamp": 1763644765799,
+			"meta": {}
+		},
+		{
+			"x": 77.48443351004914,
+			"y": 2594.8785804736376,
+			"z": 0.6076428297012773,
+			"meta": {},
+			"id": "camera:page:BX6X-TicgO5X9eYYb4X2R",
+			"typeName": "camera"
+		},
+		{
+			"x": 110,
+			"y": 764,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"meta": {},
+			"id": "page:BX6X-TicgO5X9eYYb4X2R",
+			"name": "details",
+			"index": "a2xJXBZV",
+			"typeName": "page"
+		},
+		{
+			"x": 8.092154344305484,
+			"y": -2461.5765878543543,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:OrSm1xxi9MNO-ltJcuJTm",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 2379.125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "I'll help you separate the pages into individual HTML files. Let me first examine the current structure and content of your files to understand what needs to be separated."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Read "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "index.html"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Now let me check the existing JavaScript files to understand the current structure:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Read "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "login.js"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Read "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "register.js"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Now I'll create separate HTML files for login and register pages, along with a main dashboard page. I'll extract the relevant sections from the current "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "index.html"
+								},
+								{
+									"type": "text",
+									"text": " and create individual files."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Created "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "login.html"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Created "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "register.html"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Created "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "dashboard.html"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Now let's update the main "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "index.html"
+								},
+								{
+									"type": "text",
+									"text": " file to serve as a landing page that redirects to the login page:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "index.html"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Perfect! I have successfully separated your application into individual HTML files. Here's what I've created for you:"
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 2
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Files Created:"
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1. "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "index.html"
+								},
+								{
+									"type": "text",
+									"text": " - Landing Page"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Welcome page with options to login or register"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Automatically redirects to dashboard if user is already logged in"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2. "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "login.html"
+								},
+								{
+									"type": "text",
+									"text": " - Login Page"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Contains the login form"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Forgot password functionality"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Link to registration page"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Redirects to dashboard upon successful login"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "3. "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "register.html"
+								},
+								{
+									"type": "text",
+									"text": " - Registration Page"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "User registration form with all fields"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Password validation"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Department selection"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Redirects to login page after successful registration"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "4. "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "dashboard.html"
+								},
+								{
+									"type": "text",
+									"text": " - Main Dashboard"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Contains all the inventory management functionality:"
+												}
+											]
+										},
+										{
+											"type": "bulletList",
+											"content": [
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Main menu with navigation cards"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Inventory items page with search and filtering"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Add new items page"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Reports page with charts and analytics"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Authentication check (redirects to login if not logged in)"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "User session management with logout functionality"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 2
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Key Features Added:"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1,
+								"type": null
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Session Management"
+												},
+												{
+													"type": "text",
+													"text": ": Uses "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "code"
+														}
+													],
+													"text": "localStorage"
+												},
+												{
+													"type": "text",
+													"text": " to maintain user login state across pages"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Navigation"
+												},
+												{
+													"type": "text",
+													"text": ": Proper links between pages using "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "code"
+														}
+													],
+													"text": "window.location.href"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Authentication"
+												},
+												{
+													"type": "text",
+													"text": ": Dashboard checks if user is logged in before allowing access"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "User Display"
+												},
+												{
+													"type": "text",
+													"text": ": Shows the current logged-in user's name in the dashboard"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Clean Separation"
+												},
+												{
+													"type": "text",
+													"text": ": Each page is now independent and focused on its specific functionality"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 2
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "How to Use:"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1,
+								"type": null
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Start with "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+																"target": "_blank",
+																"rel": "noopener noreferrer nofollow",
+																"class": "chat-inline-anchor-widget show-file-icons"
+															}
+														}
+													],
+													"text": "index.html"
+												},
+												{
+													"type": "text",
+													"text": " - this is your main entry point"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Users can either login (if they have an account) or register (to create a new account)"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "After successful login, they're redirected to the dashboard"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "The dashboard contains all the inventory management features"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Users can logout, which clears their session and redirects back to login"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Your existing "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "vscode-file://vscode-app/d:/Window%20File/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": "chat-inline-anchor-widget show-file-icons"
+											}
+										}
+									],
+									"text": "style.css"
+								},
+								{
+									"type": "text",
+									"text": " file will continue to work with all these pages, and the functionality is preserved while being properly separated into logical, maintainable files."
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											}
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											}
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											}
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Claude Sonnet 4 • 1x"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:BX6X-TicgO5X9eYYb4X2R",
+			"index": "a1zSRAFG",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"editingShapeId": "shape:OrSm1xxi9MNO-ltJcuJTm",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:OrSm1xxi9MNO-ltJcuJTm"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:BX6X-TicgO5X9eYYb4X2R",
+			"pageId": "page:BX6X-TicgO5X9eYYb4X2R",
+			"typeName": "instance_page_state"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1071,
+				"h": 918
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:BX6X-TicgO5X9eYYb4X2R",
+			"typeName": "instance"
+		}
+	]
+}

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function isValidEmail(email) {
-        // Basic email regex for validation
+        // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }

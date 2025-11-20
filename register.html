@@ -3,65 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Register - Stationery Management System</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="form-section">
-            <div class="logo">
-                <img src="logo.png" alt="Logo"> <!-- Replace with your logo -->
+        <!-- Register Page -->
+        <div id="registerPage" class="page active">
+            <div class="header">
+                <h1>📝 Create Account</h1>
+                <p>Join our stationery management system</p>
             </div>
-            <h1>Register</h1>
-            <p>Manage all your inventory efficiently</p>
-            <p>Let's get you on board so you can verify your personal account and begin setting up your work profile.</p>
-            <form id="registerForm">
-                <div class="input-row">
-                    <div class="input-group">
-                        <label for="firstName">First name</label>
-                        <input type="text" id="firstName" placeholder="Enter your name">
-                        <div class="error-message" id="firstNameError"></div>
+            <div class="content">
+                <form class="login-form" onsubmit="register(event)">
+                    <div class="form-group">
+                        <label for="regFullName">Full Name</label>
+                        <input type="text" id="regFullName" name="regFullName" required placeholder="Enter your full name">
                     </div>
-                    <div class="input-group">
-                        <label for="lastName">Last name</label>
-                        <input type="text" id="lastName" placeholder="Enter your last name">
-                        <div class="error-message" id="lastNameError"></div>
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" name="regEmail" required placeholder="Enter your email address">
                     </div>
-                </div>
-                <div class="input-row">
-                    <div class="input-group">
-                        <label for="regEmail">Email</label>
-                        <input type="email" id="regEmail" placeholder="Enter your Email">
-                        <div class="error-message" id="regEmailError"></div>
+                    <div class="form-group">
+                        <label for="regUsername">Username</label>
+                        <input type="text" id="regUsername" name="regUsername" required placeholder="Choose a username">
                     </div>
-                    <div class="input-group">
-                        <label for="phoneNumber">Phone No.</label>
-                        <input type="text" id="phoneNumber" placeholder="Enter your Phone Number (Minimum 10 digits)">
-                        <div class="error-message" id="phoneNumberError"></div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" name="regPassword" required placeholder="Create a password" minlength="6">
                     </div>
-                </div>
-                <div class="input-group">
-                    <label for="regPassword">Password</label>
-                    <input type="password" id="regPassword" placeholder="Enter your Password">
-                    <div class="error-message" id="regPasswordError"></div>
-                </div>
-                <div class="options">
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="termsCheckbox"> I agree to all terms, privacy policies, and laws
-                        <span class="checkmark"></span>
-                    </label>
-                    <div class="error-message" id="termsError"></div>
-                </div>
-                <button type="submit" class="btn primary-btn">Sign up</button>
-                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
-            </form>
-        </div>
-        <div class="image-section">
-            <!-- Background image or illustration as per your Figma design -->
-            <img src="register-illustration.png" alt="Register Illustration"> 
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" name="regConfirmPassword" required placeholder="Confirm your password">
+                    </div>
+                    <div class="form-group">
+                        <label for="regDepartment">Department</label>
+                        <select id="regDepartment" name="regDepartment" required>
+                            <option value="">Select Department</option>
+                            <option value="Administration">Administration</option>
+                            <option value="HR">Human Resources</option>
+                            <option value="Finance">Finance</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Operations">Operations</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" style="width: 100%;">Create Account</button>
+                    </div>
+                    <div class="form-group" style="text-align: center;">
+                        <span style="color: #666; font-size: 14px;">Already have an account? </span>
+                        <a href="login.html" style="color: #4facfe; text-decoration: none; font-size: 14px; font-weight: 600;">Sign In</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
-    <script src="register.js"></script>
+    <script>
+        // Register function
+        function register(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById('regFullName').value;
+            const email = document.getElementById('regEmail').value;
+            const username = document.getElementById('regUsername').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            const department = document.getElementById('regDepartment').value;
+            
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+            
+            // Validate password length
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+            
+            // Mock registration - in real app, this would send data to server
+            alert(`Account created successfully for ${fullName}!\n\nYou can now log in with your username: ${username}`);
+            
+            // Clear form
+            document.getElementById('regFullName').value = '';
+            document.getElementById('regEmail').value = '';
+            document.getElementById('regUsername').value = '';
+            document.getElementById('regPassword').value = '';
+            document.getElementById('regConfirmPassword').value = '';
+            document.getElementById('regDepartment').value = '';
+            
+            // Redirect to login page
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 </html>
