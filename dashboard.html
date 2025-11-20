@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Stationery Management System</title>
     <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -14,11 +13,7 @@
         <div id="mainMenuPage" class="page active">
             <div class="header">
                 <h1>📋 Main Dashboard</h1>
-                <p>Welcome to your stationery management system</p>
-                <!-- <div style="text-align: right; margin-top: 10px;">
-                    <span style="color: #666;">Welcome, <strong id="currentUserDisplay"></strong></span>
-                    <button class="btn btn-secondary" onclick="logout()" style="margin-left: 10px; padding: 5px 15px; font-size: 14px;">Logout</button>
-                </div> -->
+                <p>Welcome To Your Stationery Management System</p>
             </div>
             <div class="content">
                 <div class="menu-grid">
@@ -37,11 +32,11 @@
                         <h3>Reports</h3>
                         <p>View inventory reports and analytics</p>
                     </div>
-                    <!-- <div class="menu-card" onclick="logout()">
+                <div class="menu-card" onclick="logout()">
                         <div class="icon">🚪</div>
                         <h3>Logout</h3>
                         <p>Sign out of the system</p>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -375,7 +370,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
                     plugins: {
                         legend: {
                             position: 'bottom',
