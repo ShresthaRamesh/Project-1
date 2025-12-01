@@ -2,16 +2,14 @@
 // Database configuration
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = ""; 
 $dbname = "stationery_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-echo "database connected";
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-    echo "database not connected";
 }
 
 // Create users table if not exists
@@ -47,7 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->execute()) {
         echo "<script>alert('Registration successful!'); window.location.href='login.html';</script>";
     } else {
-        echo "<script>alert('Error: Registration failed.'); window.history.back();</script>";
+        $errorMsg = $conn->error;
+        echo "<script>alert('Error: Registration failed. $errorMsg'); window.history.back();</script>";
     }
     $stmt->close();
 }
