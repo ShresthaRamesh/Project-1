@@ -15,7 +15,7 @@
                 <p>Join our stationery management system</p>
             </div>
             <div class="content">
-                <form class="login-form" action="/Project_Stationery/register.php" method="POST">
+                <form class="login-form" action="./register.php" method="POST">
                     <div class="form-group">
                         <label for="regFullName">Full Name</label>
                         <input type="text" id="regFullName" name="regFullName" required placeholder="Enter your full name">
@@ -74,88 +74,5 @@
         </div>
     </div>
 
-    <!-- <script>
-        // Handle role checkbox selection (only one can be selected)
-        function handleRoleChange(selectedRole) {
-            const adminCheckbox = document.getElementById('roleAdmin');
-            const userCheckbox = document.getElementById('roleUser');
-            const roleError = document.getElementById('roleError');
-            
-            if (selectedRole === 'Admin') {
-                if (adminCheckbox.checked) {
-                    userCheckbox.checked = false;
-                }
-            } else {
-                if (userCheckbox.checked) {
-                    adminCheckbox.checked = false;
-                }
-            }
-            
-            // Clear error message when a role is selected
-            if (adminCheckbox.checked || userCheckbox.checked) {
-                roleError.style.display = 'none';
-            }
-        }
-
-        // Register function
-        function register(event) {
-            event.preventDefault();
-            
-            const fullName = document.getElementById('regFullName').value;
-            const email = document.getElementById('regEmail').value;
-            const username = document.getElementById('regUsername').value;
-            const password = document.getElementById('regPassword').value;
-            const confirmPassword = document.getElementById('regConfirmPassword').value;
-            const department = document.getElementById('regDepartment').value;
-            
-            // Get selected role
-            const adminCheckbox = document.getElementById('roleAdmin');
-            const userCheckbox = document.getElementById('roleUser');
-            const roleError = document.getElementById('roleError');
-            
-            let selectedRole = '';
-            if (adminCheckbox.checked) {
-                selectedRole = 'Admin/Owner';
-            } else if (userCheckbox.checked) {
-                selectedRole = 'User/Viewer';
-            }
-            
-            // Validate role selection
-            if (!selectedRole) {
-                roleError.textContent = 'Please select a role.';
-                roleError.style.display = 'block';
-                return;
-            }
-            
-            // Validate passwords match
-            if (password !== confirmPassword) {
-                alert('Passwords do not match. Please try again.');
-                return;
-            }
-            
-            // Validate password length
-            if (password.length < 6) {
-                alert('Password must be at least 6 characters long.');
-                return;
-            }
-            
-            // Mock registration - in real app, this would send data to server
-            alert(`Account created successfully for ${fullName}!\n\nRole: ${selectedRole}\nDepartment: ${department}\n\nYou can now log in with your username: ${username}`);
-            
-            // Clear form
-            document.getElementById('regFullName').value = '';
-            document.getElementById('regEmail').value = '';
-            document.getElementById('regUsername').value = '';
-            document.getElementById('regPassword').value = '';
-            document.getElementById('regConfirmPassword').value = '';
-            document.getElementById('regDepartment').value = '';
-            adminCheckbox.checked = false;
-            userCheckbox.checked = false;
-            roleError.style.display = 'none';
-            
-            // Redirect to login page
-            window.location.href = 'login.html';
-        }
-    </script> -->
 </body>
 </html>
