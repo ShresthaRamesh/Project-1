@@ -7,6 +7,7 @@ $dbname = "stationery_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -24,7 +25,6 @@ $tableSql = "CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 $conn->query($tableSql);
-
 // Handle registration POST request
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $fullName = $conn->real_escape_string($_POST['regFullName'] ?? '');
@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    echo $_POST;
 
     // Insert user data
     $sql = "INSERT INTO users (full_name, email, username, password, department, role) VALUES (?, ?, ?, ?, ?, ?)";
